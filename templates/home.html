@@ -1,0 +1,11 @@
+<html>
+  <body>
+    <h1>Hallo</h1>
+    {% for artikel in artikels %}
+      <p>
+         <h2><a href="{% url blog_baca artikel.id %}">{{ artikel.judul }}</a></h2><br>
+         {{ artikel.isi|truncatewords:20 }}
+      </p>
+    {% endfor %}
+  </body>
+</html>
